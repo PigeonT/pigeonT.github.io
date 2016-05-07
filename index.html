@@ -9,24 +9,30 @@
 	<meta name="description" content="pigeonT blog">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css">	
+
 </head>
-<body class="container">
+<body class="container" ng-controller="containerController">
 	<header class="main-header">
 		<nav>
 			<ul>
-				<li><a href="aboutme.html">About me</a></li>
-				<li><a href="interests.html">Interests</a></li>
-				<li><a href="reading.html">Reading</a></li>
-				<li><a href="contacts.html">Contacts</a></li>
+				<li><a href="#templates/aboutme">About me</a></li>
+				<li><a href="#">Interests</a></li>
+				<li><a href="#">Reading</a></li>
+				<li><a href="#">Contacts</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<main class="content">
-		<div class="main-content">
-			
+		<div class="main-content" ng-view>
+
 		</div>
+
+        <script type = "text/ng-template" id = "templates/aboutme.htm">
+            <h2> about me  </h2>
+        </script>
+
 	</main>
 
 	<footer>

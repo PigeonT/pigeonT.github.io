@@ -1,0 +1,3 @@
+define(['angularRoute'], function(ngRoute) {
+
+});
