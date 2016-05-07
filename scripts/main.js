@@ -23,7 +23,7 @@ require(['angular', 'angularRoute'], function(angular, ngRoute) {
 	angular.module('pigeonT', ['ngRoute'])
 		.config(['$routeProvider', function($routeProvider) {
 			$routeProvider
-				.when('templates/aboutme', {
+				.when('/aboutme', {
 					templateUrl: 'templates/aboutme.html',
 					controller: 'aboutmeController' 
 				})
