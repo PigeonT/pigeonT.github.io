@@ -43,6 +43,8 @@ require(['angular', 'angularRoute'], function(angular, ngRoute) {
 		.controller('containerController', function($scope) {
 			
 		})
+		.controller('aboutmeController', function($scope) {
+        })
 		.controller('interestsController', function($scope) {
         })
         .controller('readingController', function($scope) {
