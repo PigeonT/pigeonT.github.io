@@ -1,8 +1,5 @@
 
 body { 
-	background: linear-gradient(#AAB23D, #00ff55, #bfff00);
-	font-family: "Times New Roman", Georgia, Serif;
-	font-size: 16px;
 	text-align: left;
 	height: 1200px;
 }
@@ -30,7 +27,7 @@ a:hover, a:active {
 
 	nav {
 		border-radius: 15px;
-		background-color: #1E7C39;
+		background-color: #59749D;
 		height: 40px;
 		text-align: center;
 
@@ -53,8 +50,12 @@ a:hover, a:active {
 				}
 
 				a:hover {
-					color: #5FFFB3;
+					color: #BEC4C1;
 				}
+			}
+
+			li:nth-child(-n+3) {
+				border-right: solid 3px #A2A253;
 			}
 		}
 	}
