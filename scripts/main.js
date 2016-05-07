@@ -23,14 +23,6 @@ require(['route'], function(angular, ngRoute) {
 	angular.module('pigeonT', ['ngRoute'])
 		.controller('containerController', function($scope) {
 			
-		})
-		.controller('aboutmeController', function($scope) {
-        })
-		.controller('interestsController', function($scope) {
-        })
-        .controller('readingController', function($scope) {
-        })
-        .controller('contactsController', function($scope) {
-        });
+		});
 
 });
