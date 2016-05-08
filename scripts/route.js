@@ -2,8 +2,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 
 	'use strict'
 
-	function routeConfig() {
-		angular.module('pigeonT', ['ngRoute'])
+	angular.module('pigeonT', ['ngRoute'])
 		.config(['$routeProvider', function($routeProvider) {
 			$routeProvider
 				.when('/aboutme', {
@@ -22,11 +21,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 					templateUrl: 'templates/contacts.html',
 					controller: 'contactsController' 
 				});
-		}]);
-	}
-	
-	return {
-		routeConfig : routeConfig
-	}
+	}]);
+
 
 });
