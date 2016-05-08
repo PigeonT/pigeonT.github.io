@@ -39,11 +39,11 @@ require(['route'], function(route) {
 			
 		}]);
 
-	window.addEventListener('load', function() {
+	window.addEventListener('DOMContentLoaded', function() {
 		//bootstrap angular
 	    angular.element(document).ready(function() {
 	      angular.bootstrap(document, ['pigeonT']);
 	    });
-	});
+	}, false);
 	
 });
