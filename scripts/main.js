@@ -17,10 +17,8 @@ require.config({
 	}
 });
 
-require(['angular'], function(angular) {
+require(['angular', 'route'], function(angular) {
 	'use strict'
-
-	angular.config();
 
 	angular.module('pigeonT')
 		.controller('containerController', function($scope) {
