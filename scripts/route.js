@@ -1,9 +1,9 @@
-define(['angular', 'angularRoute'], function(angular, ngRoute) {
+define(['angular', 'angularRoute'], function(angular) {
 
 	'use strict'
 
 	function _config() {
-		angular.module('pigeonT', ['ngRoute'])
+		angular.module('pigeonT')
 			.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/aboutme', {
@@ -24,7 +24,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 					});
 		}]);
 	};
-	
+
 	return {
 		module : angular.module,
 		config : _config
