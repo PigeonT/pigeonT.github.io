@@ -24,9 +24,18 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 					});
 		}]);
 
+		let q = angular.module('pigeonT');	
 		//bootstrap angular
 	    angular.element(document).ready(function() {
+	      angular.bootstrap(document, 'pigeonT');
+	    });
+	    		//bootstrap angular
+	    angular.element(document).ready(function() {
 	      angular.bootstrap(document, ['pigeonT']);
+	    });
+	    		//bootstrap angular
+	    angular.element(document).ready(function() {
+	      angular.bootstrap(document, q);
 	    });
 	};
 
