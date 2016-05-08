@@ -28,6 +28,7 @@ require(['angular', 'route', 'angularRoute'], function(angular, route, ngRoute) 
 	angular.module('pigeonT')
 		.controller('containerController', function($scope) {
 			
-	});
+		})
+		.controller('aboutmeController', function($scope) {;
 
-});
+		});
