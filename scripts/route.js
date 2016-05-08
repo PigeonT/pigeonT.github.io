@@ -23,6 +23,11 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 						controller: 'contactsController' 
 					});
 		}]);
+
+		//bootstrap angular
+	    angular.element(document).ready(function() {
+	      angular.bootstrap(document, ['pigeonT']);
+	    });
 	};
 
 	return {

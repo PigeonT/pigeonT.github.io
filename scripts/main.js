@@ -38,10 +38,4 @@ require(['angular', 'route'], function(angular, route) {
 		.controller('contactsController', ['$scope', function($scope) {
 			
 		}]);
-
-
-	//bootstrap angular
-    angular.element(document).ready(function() {
-      angular.bootstrap(document, ['pigeonT']);
-    });
 });
