@@ -3,9 +3,9 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 	'use strict'
 
 	function _config() {
-		window.app = angular.module('pigeonT', [ngRoute, ]);
 
-			app.config(['$routeProvider', function($routeProvider) {
+		angular.module('pigeonT', ['ngRoute'])
+			.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/aboutme', {
 						templateUrl: 'templates/aboutme.html',
@@ -23,7 +23,26 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 						templateUrl: 'templates/contacts.html',
 						controller: 'contactsController' 
 					});
-		}]);
+			}])
+			.controller('containerController', function($scope) {
+				
+			})
+			.controller('aboutmeController', function($scope) {;
+
+			})
+			.controller('interestsController', function($scope) {
+				
+			})
+			.controller('readingController', function($scope) {;
+
+			})
+			.controller('contactsController', function($scope) {;
+
+			});
+
+	    angular.element(document).ready(function() {
+	      angular.bootstrap(document, ['pigeonT']);
+	    });
 
 
 	};
