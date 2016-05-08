@@ -23,22 +23,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 						templateUrl: 'templates/contacts.html',
 						controller: 'contactsController' 
 					});
-			}])
-			.controller('containerController', function($scope) {
-				
-			})
-			.controller('aboutmeController', function($scope) {;
-
-			})
-			.controller('interestsController', function($scope) {
-				
-			})
-			.controller('readingController', function($scope) {;
-
-			})
-			.controller('contactsController', function($scope) {;
-
-			});
+			}]);
 
 	    angular.element(document).ready(function() {
 	      angular.bootstrap(document, ['pigeonT']);
