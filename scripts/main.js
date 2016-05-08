@@ -23,21 +23,21 @@ require(['angular', 'route'], function(angular, route) {
 	route.config();
 
 	angular.module('pigeonT')
-		.controller('containerController', function($scope) {
+		.controller('containerController', ['$scope', function($scope) {
 			
-		})
-		.controller('aboutmeController', function($scope) {;
-
-		})
-		.controller('interestsController', function($scope) {
+		}])
+		.controller('aboutmeController', ['$scope', function($scope) {
 			
-		})
-		.controller('readingController', function($scope) {;
-
-		})
-		.controller('contactsController', function($scope) {;
-
-		});
+		}])
+		.controller('interestsController', ['$scope', function($scope) {
+			
+		}])
+		.controller('readingController', ['$scope', function($scope) {
+			
+		}])
+		.controller('contactsController', ['$scope', function($scope) {
+			
+		}]);
 
 
 	//bootstrap angular
