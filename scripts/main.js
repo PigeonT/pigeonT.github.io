@@ -23,7 +23,7 @@ require(['angular','route'], function(angular, route) {
 	//config routing
 	route.routeConfig();
 
-	angular.module('pigeonT', [])
+	angular.module('pigeonT')
 		.controller('containerController', function($scope) {
 			
 		});

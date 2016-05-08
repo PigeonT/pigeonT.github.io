@@ -1,6 +1,5 @@
 body {
-  text-align: left;
-  height: 1200px; }
+  text-align: left; }
 
 .container {
   margin: 0 auto;
@@ -9,6 +8,12 @@ body {
 
 a {
   text-decoration: none; }
+
+a:link, a:visited {
+  color: #FFFFFF; }
+
+a:hover {
+  color: #BEC4C1; }
 
 .main-header {
   margin: 20px auto; }
@@ -34,5 +39,25 @@ a {
           color: #BEC4C1; }
       .main-header nav ul li:nth-child(-n+3) {
         border-right: solid 3px #A2A253; }
+
+footer {
+  margin: 40px auto;
+  color: #119797;
+  height: 20px;
+  text-align: center; }
+  footer p {
+    text-align: center; }
+  footer a:link, footer a:visited {
+    color: #119797; }
+  footer a:hover {
+    color: #BEC4C1; }
+
+/*@media only screen and (max-width: 530px) {
+	.container {
+		margin: 0 auto;
+		width: 60%;
+		clear: both;
+	}
+}*/
 
 /*# sourceMappingURL=main.css.map */

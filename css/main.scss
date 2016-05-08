@@ -1,7 +1,6 @@
 
 body { 
 	text-align: left;
-	height: 1200px;
 }
 
 .container {
@@ -15,10 +14,15 @@ a {
 }
 
 a:link, a:visited {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #BEC4C1;
 
 }
 
-a:hover, a:active {
+a:active {
 
 }
 
@@ -61,3 +65,31 @@ a:hover, a:active {
 	}
 
 }
+
+footer {
+	margin: 40px auto;
+	color: #119797;
+	height: 20px;
+	text-align: center;
+
+	p {
+		text-align: center;
+	}
+
+	a:link, a:visited {
+		color: #119797;
+	}
+
+	a:hover {
+		color: #BEC4C1;
+
+	}
+}
+
+/*@media only screen and (max-width: 530px) {
+	.container {
+		margin: 0 auto;
+		width: 60%;
+		clear: both;
+	}
+}*/
