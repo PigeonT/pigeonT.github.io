@@ -2,8 +2,7 @@ require.config({
 
 	paths: {
 		'angular' : ['https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min', 'libs/angular.min'],
-		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route.min', 'libs/angular-route.min'],
-		'angularAMD' : ['https://cdn.jsdelivr.net/angular.amd/0.2/angularAMD.min.js', 'libs/angularAMD.min']
+		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route.min', 'libs/angular-route.min']
 	},
 
 	shim: {
@@ -14,38 +13,16 @@ require.config({
 		angularRoute : {
 			deps : ['angular'],
 			exports : 'angular-route'
-		},
-
-		angularAMD : {
-			deps : ['angular'],
-			exports : 'angularAMD'
 		}
 	}
 });
 
-require(['angular', 'angularRoute'], function(angular, ngRoute) {
+require(['angular', 'route'], function(angular, route) {
 	'use strict'
 
-	angular.module('pigeonT', ['ngRoute'])
-		.config(['$routeProvider', function($routeProvider) {
-			$routeProvider
-				.when('/aboutme', {
-					templateUrl: 'templates/aboutme.html',
-					controller: 'aboutmeController' 
-				})
-				.when('/interests', {
-					templateUrl: 'templates/interests.html',
-					controller: 'interestsController' 
-				})
-				.when('/reading', {
-					templateUrl: 'templates/reading.html',
-					controller: 'readingController' 
-				})
-				.when('/contacts', {
-					templateUrl: 'templates/contacts.html',
-					controller: 'contactsController' 
-				});
-		}])
+	route.config();
+
+	angular.module('pigeonT')
 		.controller('containerController', function($scope) {
 			
 		})
@@ -62,6 +39,8 @@ require(['angular', 'angularRoute'], function(angular, ngRoute) {
 
 		});
 
+
+	//bootstrap angular
     angular.element(document).ready(function() {
       angular.bootstrap(document, ['pigeonT']);
     });
