@@ -1,8 +1,9 @@
 require.config({
 
 	paths: {
-		'angular' : ['libs/angular'],
-		'angularRoute' : ['libs/angular-route']
+		'angular' : ['https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min', 'libs/angular.min'],
+		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route.min', 'libs/angular-route.min'],
+		'angularAMD' : ['https://cdn.jsdelivr.net/angular.amd/0.2/angularAMD.min.js', 'libs/angularAMD.min']
 	},
 
 	shim: {
@@ -13,6 +14,11 @@ require.config({
 		angularRoute : {
 			deps : ['angular'],
 			exports : 'angular-route'
+		},
+
+		angularAMD : {
+			deps : ['angular'],
+			exports : 'angularAMD'
 		}
 	}
 });
@@ -55,4 +61,8 @@ require(['angular', 'angularRoute'], function(angular, ngRoute) {
 		.controller('contactsController', function($scope) {;
 
 		});
+
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['pigeonT']);
+    });
 });
