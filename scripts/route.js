@@ -3,7 +3,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 	'use strict'
 
 	function _config() {
-		window.app = angular.module('pigeonT', [ngRoute]);
+		window.app = angular.module('pigeonT', [ngRoute, ]);
 
 			app.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
