@@ -17,7 +17,7 @@ require.config({
 	}
 });
 
-require(['angular', 'route'], function(angular) {
+require(['angular', 'route'], function(angular, route) {
 	'use strict'
 
 	angular.module('pigeonT')
