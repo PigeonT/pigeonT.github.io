@@ -39,7 +39,7 @@ require(['route'], function(route) {
 			
 		}]);
 
-	window.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('DOMContentLoaded', function() {
 		//bootstrap angular
 	    angular.element(document).ready(function() {
 	      angular.bootstrap(document, ['pigeonT']);
