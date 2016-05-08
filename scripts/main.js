@@ -39,9 +39,11 @@ require(['route'], function(route) {
 			
 		}]);
 
-
-	//bootstrap angular
-    angular.element(document).ready(function() {
-      angular.bootstrap(document, ['pigeonT']);
-    });
+	window.addEventListener('load', function() {
+		//bootstrap angular
+	    angular.element(document).ready(function() {
+	      angular.bootstrap(document, ['pigeonT']);
+	    });
+	});
+	
 });
