@@ -17,12 +17,12 @@ require.config({
 	}
 });
 
-require(['angular', 'route'], function(angular, route) {
+require(['route'], function(route) {
 	'use strict'
 
 	route.config();
 
-	angular.module('pigeonT')
+	app
 		.controller('containerController', ['$scope', function($scope) {
 			
 		}])
@@ -38,4 +38,10 @@ require(['angular', 'route'], function(angular, route) {
 		.controller('contactsController', ['$scope', function($scope) {
 			
 		}]);
+
+
+	//bootstrap angular
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, ['pigeonT']);
+    });
 });

@@ -3,8 +3,9 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 	'use strict'
 
 	function _config() {
-		angular.module('pigeonT', [ngRoute])
-			.config(['$routeProvider', function($routeProvider) {
+		window.app = angular.module('pigeonT', [ngRoute]);
+
+			app.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/aboutme', {
 						templateUrl: 'templates/aboutme.html',
@@ -24,19 +25,7 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 					});
 		}]);
 
-		let q = angular.module('pigeonT');	
-		//bootstrap angular
-	    angular.element(document).ready(function() {
-	      angular.bootstrap(document, 'pigeonT');
-	    });
-	    		//bootstrap angular
-	    angular.element(document).ready(function() {
-	      angular.bootstrap(document, ['pigeonT']);
-	    });
-	    		//bootstrap angular
-	    angular.element(document).ready(function() {
-	      angular.bootstrap(document, q);
-	    });
+
 	};
 
 	return {
