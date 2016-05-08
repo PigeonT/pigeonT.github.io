@@ -17,7 +17,10 @@ require.config({
 	}
 });
 
-require(['route'], function(route) {
+require(['route', 'controller'], function(route, controller) {
 	'use strict'
+	
 	route.config();
+
+	controller.config();
 });
