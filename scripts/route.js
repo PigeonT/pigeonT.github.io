@@ -25,6 +25,8 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 		}]);
 	};
 
+	_config();
+
 	return {
 		module : angular.module,
 		config : _config
