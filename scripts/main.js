@@ -32,3 +32,4 @@ require(['angular', 'route', 'angularRoute'], function(angular, route, ngRoute) 
 		.controller('aboutmeController', function($scope) {;
 
 		});
+});
