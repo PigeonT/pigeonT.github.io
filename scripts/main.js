@@ -1,8 +1,8 @@
 require.config({
 
 	paths: {
-		'angular' : ['https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min', 'libs/angular'],
-		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route.min', 'libs/angular-route']
+		'angular' : ['https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular', 'libs/angular'],
+		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route', 'libs/angular-route']
 	},
 
 	shim: {
