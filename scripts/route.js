@@ -1,4 +1,4 @@
-define(['angular', 'angularRoute'], function(angular) {
+define(function() {
 
 	'use strict'
 
@@ -26,7 +26,6 @@ define(['angular', 'angularRoute'], function(angular) {
 	};
 
 	return {
-		module : angular.module,
 		config : _config
 	}
 
