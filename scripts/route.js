@@ -1,6 +1,6 @@
 define(['angular', 'angularRoute'], function(angular, ngRoute) {
 
-	'use strict'
+	//'use strict'
 
 	(function() {
 		angular.module('pigeonT', ['ngRoute'])
