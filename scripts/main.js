@@ -26,7 +26,4 @@ require(['route', 'controller'], function(route, controller) {
 
 	//main logic begin
 
-	//set footer bar at the bottom
-	document.getElementsByClassName('content')[0].style.minHeight = (window.innerHeight - 180) + 'px';
-
 });
