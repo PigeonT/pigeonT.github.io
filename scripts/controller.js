@@ -1,25 +1,17 @@
-define(['route'], function() {
+define(['route', 'controllers/aboutmeController', 
+		'controllers/interestsController', 
+		'controllers/readingController', 
+		'contactsController'], 
+	function(route, aboutme, interests, reading, contacts) {
 
 	'use strict'
 
 	function _config() {
 
-		angular.module('pigeonT')
-			.controller('containerController', function($scope) {
-				
-			})
-			.controller('aboutmeController', function($scope) {;
-
-			})
-			.controller('interestsController', function($scope) {
-				
-			})
-			.controller('readingController', function($scope) {;
-
-			})
-			.controller('contactsController', function($scope) {;
-
-			});
+		aboutme.config();
+		interests.config();
+		reading.config();
+		contacts.config();
 	};
 
 	return {
@@ -27,3 +19,4 @@ define(['route'], function() {
 	}
 
 });
+

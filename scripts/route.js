@@ -9,19 +9,19 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 				$routeProvider
 					.when('/aboutme', {
 						templateUrl: 'templates/aboutme.html',
-						controller: 'aboutmeController' 
+						controller: 'controllers/aboutmeController' 
 					})
 					.when('/interests', {
 						templateUrl: 'templates/interests.html',
-						controller: 'interestsController' 
+						controller: 'controllers/interestsController' 
 					})
 					.when('/reading', {
 						templateUrl: 'templates/reading.html',
-						controller: 'readingController' 
+						controller: 'controllers/readingController' 
 					})
 					.when('/contacts', {
 						templateUrl: 'templates/contacts.html',
-						controller: 'contactsController' 
+						controller: 'controllers/contactsController' 
 					});
 			}]);
 
