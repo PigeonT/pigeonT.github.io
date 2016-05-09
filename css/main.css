@@ -41,6 +41,11 @@ a:hover {
       .main-header nav ul li:nth-child(-n+3) {
         border-right: solid 3px #A2A253; }
 
+main.content {
+  text-align: center; }
+  main.content > div {
+    padding: 5% 0; }
+
 footer {
   margin: 40px auto;
   color: #119797;
@@ -62,7 +67,7 @@ footer {
 		margin: 0 auto;
 		width: 60%;
 		clear: both;
-	}
+	}	
 }*/
 
 /*# sourceMappingURL=main.css.map */

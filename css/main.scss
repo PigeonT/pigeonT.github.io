@@ -69,7 +69,14 @@ a:active {
 			}
 		}
 	}
+}
 
+main.content {
+	text-align: center;
+
+	& > div {
+		padding: 5% 0;
+	}
 }
 
 footer {
