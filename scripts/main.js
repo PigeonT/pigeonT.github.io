@@ -17,15 +17,16 @@ require.config({
 	}
 });
 
-require(['route', 'controller'], function(route) {
+require(['route', 'controller'], function(route, controller) {
 	'use strict'
 	
 	route.config();
 
+	controller.config();
+
 	//main logic begin
+
+	//set footer bar at the bottom
 	document.getElementsByClassName('content')[0].style.minHeight = (window.innerHeight - 180) + 'px';
 
-	document.addEventListener('DOMContentLoaded', function() {
-		window.location.pathname='templates/aboutme.html';
-	});
 });

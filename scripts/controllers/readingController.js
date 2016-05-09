@@ -1,4 +1,4 @@
-define(function() {
+define(['angular'], function() {
 	(function(){
 
 		angular.module('pigeonT')

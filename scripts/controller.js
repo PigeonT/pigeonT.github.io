@@ -1,9 +1,16 @@
-define(['route', 'controllers/aboutmeController', 
-		'controllers/interestsController', 
-		'controllers/readingController', 
-		'contactsController'], 
-, function() {
-	//do nothing, because all dependency already injected
+define(['route'], function() {
+	function _config() {
+		//inject all dependency
+		require(['controllers/aboutmeController', 
+				'controllers/interestsController', 
+				'controllers/readingController', 
+				'controllers/contactsController'], function() {});
+
+	}
+
+	return {
+		config : _config
+	}
 
 });
 

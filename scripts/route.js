@@ -22,7 +22,10 @@ define(['angular', 'angularRoute'], function(angular, ngRoute) {
 					.when('/contacts', {
 						templateUrl: 'templates/contacts.html',
 						controller: 'controllers/contactsController' 
-					});
+					})
+					.otherwise({
+			        	redirectTo: '/aboutme'
+			        });
 			}]);
 
 	    angular.element(document).ready(function() {
