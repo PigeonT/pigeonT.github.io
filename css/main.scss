@@ -1,6 +1,12 @@
+$pageBackgroundColor : rgb(210, 232, 239);
+$headerFooterBackgroundColor : rgba(236, 51, 51, 0.74);
+$a_LinkAndVisitedColor : #FFFFFF;
+$a_hoverColor: #BEC4C1;
+
 
 body { 
 	text-align: left;
+	background-color: $pageBackgroundColor;
 }
 
 .container {
@@ -14,11 +20,11 @@ a {
 }
 
 a:link, a:visited {
-	color: #FFFFFF;
+	color: $a_LinkAndVisitedColor;
 }
 
 a:hover {
-	color: #BEC4C1;
+	color: $a_hoverColor;
 
 }
 
@@ -31,7 +37,7 @@ a:active {
 
 	nav {
 		border-radius: 15px;
-		background-color: #59749D;
+		background-color: $headerFooterBackgroundColor;
 		height: 40px;
 		text-align: center;
 
@@ -54,7 +60,7 @@ a:active {
 				}
 
 				a:hover {
-					color: #BEC4C1;
+					color: #119797;
 				}
 			}
 
@@ -69,19 +75,23 @@ a:active {
 footer {
 	margin: 40px auto;
 	color: #119797;
-	height: 20px;
+	background-color: $headerFooterBackgroundColor;
+	height: 40px;
 	text-align: center;
+	border-radius: 15px;
 
 	p {
 		text-align: center;
+		padding: 10px 0 0 0;
+		margin: 0 auto;
 	}
 
 	a:link, a:visited {
-		color: #119797;
+		color: $a_LinkAndVisitedColor;
 	}
 
 	a:hover {
-		color: #BEC4C1;
+		color: $a_hoverColor;
 
 	}
 }

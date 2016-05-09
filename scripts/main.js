@@ -17,10 +17,15 @@ require.config({
 	}
 });
 
-require(['route', 'controller'], function(route, controller) {
+require(['route', 'controller'], function(route) {
 	'use strict'
 	
 	route.config();
 
-	controller.config();
+	//main logic begin
+	document.getElementsByClassName('content')[0].style.minHeight = (window.innerHeight - 180) + 'px';
+
+	document.addEventListener('DOMContentLoaded', function() {
+		window.location.pathname='templates/aboutme.html';
+	});
 });

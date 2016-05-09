@@ -1,5 +1,6 @@
 body {
-  text-align: left; }
+  text-align: left;
+  background-color: #d2e8ef; }
 
 .container {
   margin: 0 auto;
@@ -19,7 +20,7 @@ a:hover {
   margin: 20px auto; }
   .main-header nav {
     border-radius: 15px;
-    background-color: #59749D;
+    background-color: rgba(236, 51, 51, 0.74);
     height: 40px;
     text-align: center; }
     .main-header nav ul {
@@ -36,19 +37,23 @@ a:hover {
         .main-header nav ul li a:link, .main-header nav ul li a:visited {
           color: #FFFFFF; }
         .main-header nav ul li a:hover {
-          color: #BEC4C1; }
+          color: #119797; }
       .main-header nav ul li:nth-child(-n+3) {
         border-right: solid 3px #A2A253; }
 
 footer {
   margin: 40px auto;
   color: #119797;
-  height: 20px;
-  text-align: center; }
+  background-color: rgba(236, 51, 51, 0.74);
+  height: 40px;
+  text-align: center;
+  border-radius: 15px; }
   footer p {
-    text-align: center; }
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0 auto; }
   footer a:link, footer a:visited {
-    color: #119797; }
+    color: #FFFFFF; }
   footer a:hover {
     color: #BEC4C1; }
 

@@ -1,6 +1,10 @@
 define(function() {
-	angular.module('pigeonT')
+	(function(){
+
+		angular.module('pigeonT')
 			.controller('readingController', function($scope) {
 				
 			});
+	})();
+
 });
