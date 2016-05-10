@@ -1,8 +1,11 @@
 require.config({
 
 	paths: {
-		'angular' : ['https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min', 'libs/angular.min'],
-		'angularRoute' : ['https://code.angularjs.org/1.5.5/angular-route.min', 'libs/angular-route.min']
+		'angular' : ['libs/angular.min'],
+		'angularRoute' : ['libs/angular-route.min'],
+		'fullPage' : ['libs/fullPage.min'],
+		'jquery' : ['libs/jquery.min'],
+		'bootstrap' : ['libs/bootstrap']
 	},
 
 	shim: {
@@ -13,17 +16,35 @@ require.config({
 		angularRoute : {
 			deps : ['angular'],
 			exports : 'angular-route'
+		},
+
+		jquery : {
+			exports : '$'
+		},
+
+		fullPage : {
+			deps : ['jquery'],
+			exports : 'fullpage'
+		},
+
+		bootstrap : {
+			deps : ['jquery'],
+			exports : 'bootstrap'
 		}
 	}
 });
 
-require(['route', 'controller'], function(route, controller) {
+require(['jquery', 'fullPage', 'bootstrap'], function($) {
 	'use strict'
 	
-	route.config();
+	//route.config();
 
-	controller.config();
+	//controller.config();
 
 	//main logic begin
+
+	$(document).ready(function() {
+    	$('#fullpage').fullpage();
+	});
 
 });

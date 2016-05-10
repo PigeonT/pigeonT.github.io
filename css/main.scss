@@ -1,14 +1,43 @@
-$pageBackgroundColor : rgb(210, 232, 239);
-$headerFooterBackgroundColor : rgba(236, 51, 51, 0.74);
+$pageBackgroundColor : #FFFFFF;
 $a_LinkAndVisitedColor : #FFFFFF;
 $a_hoverColor: #BEC4C1;
+$backgroundImage : "../resources/sand.jpg";
 
 
-body { 
-	text-align: left;
-	background-color: $pageBackgroundColor;
+
+
+/*
+
+html {
+	width: 100%;
+	height: 100%;
 }
 
+
+body.container { 
+	width: 100%;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+	margin: 40px auto;
+	width: 80%;
+	nav {
+		ul {
+			display: flex;
+			margin: 10 auto;
+			padding: 0;
+			li {
+				display: inline;
+				flex : 1;
+			}
+		}
+	}
+}*/
+
+/*
 .container {
 	margin: 0 auto;
 	width: 80%;
@@ -75,7 +104,7 @@ main.content {
 	text-align: center;
 
 	& > div {
-		padding: 5% 0;
+		padding: 5	% 0;
 	}
 }
 
@@ -102,6 +131,8 @@ footer {
 
 	}
 }
+
+*/
 
 /*@media only screen and (max-width: 530px) {
 	.container {
