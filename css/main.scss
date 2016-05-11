@@ -6,13 +6,22 @@ $backgroundImage : "../resources/sand.jpg";
 
 
 
-/*
+
 
 html {
-	width: 100%;
-	height: 100%;
+    padding : 0;
+    margin : 0;
 }
 
+div#fp-nav {
+	ul {
+		li {
+			font-size: 2rem;
+			color: #27DCEC;
+		}
+	}
+}
+/*
 
 body.container { 
 	width: 100%;	
@@ -141,3 +150,5 @@ footer {
 		clear: both;
 	}	
 }*/
+
+

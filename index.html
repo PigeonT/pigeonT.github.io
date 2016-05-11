@@ -5,48 +5,62 @@
 <head>
 	<title>welcome</title>
 	<meta charset="UTF-8">
-	<meta name="keywords" content="blog programming introduction">
-	<meta name="description" content="pigeonT blog">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/fullPage.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">	
+	<meta name="keywords" content="blog programming introduction" />
+	<meta name="description" content="pigeonT blog" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/fullPage.css" />
+	<link href="css/pace-theme.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script data-main="scripts/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js" async>
+	</script>
+
 </head>
 <body class="container-fluid">
 	<header class="row main-header">
-		<nav class="navbar navbar-dark">
-			<div class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
 				<div class="navbar-header">
-			    	<!-- header and collapsed icon here -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-pigeont">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+			    	<a class="navbar-brand" href="#">pigeonT</a>
 			    </div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav nav-bar-right">
-						<li class="active"><a href="#aboutme">Me</a></li>
-						<li><a href="#interests">Interests</a></li>
-						<li><a href="#reading">Reading</a></li>
-						<li><a href="#contacts">Contacts</a></li>
+				<div class="collapse navbar-collapse" id="navbar-pigeont">
+					<ul class="nav navbar-nav navbar-right" id="menu">
+						<li class="active" data-menuanchor="aboutme"><a href="#aboutme">Me</a></li>
+						<li data-menuanchor="interests"><a href="#interests" >Interests</a></li>
+						<li data-menuanchor="reading"><a href="#reading">Reading</a></li>
+						<li data-menuanchor="contacts"><a href="#contacts">Contacts</a></li>
 					</ul>
-				</div>
+				</div> 
 			</div>
 		</nav>
 	</header>
 	
-	<main class="content">
-		<div id="fullpage">
-		    <div class="section">Some section</div>
-		    <div class="section">Some section</div>
-		    <div class="section">Some section</div>
-		    <div class="section">Some section</div>
+	<main class="row content " id="fullpage">
+		<div>
+		    <div class="section" data-anchor="aboutme">
+		    	<div class="embed-responsive embed-responsive-16by9">
+			    	<video muted loop autoplay="true" width="100%" height="100%" style="background-size:cover;">
+			    		<source src="resources/backgroundVideo.mp4" type="video/mp4" />
+			    	</video>
+		    	</div>
+		    </div>
+		    <div class="section" data-anchor="interests">
+		    	<img src="resources/sky.jpg" width="100%" height="100%" alt="sky.jpg" />
+		    </div>
+		    <div class="section" data-anchor="reading">Some section</div>
+		    <div class="section" data-anchor="contacts">Some section</div>
 		</div>       
-
 	</main>
 
-	<footer>
+	<footer class="row">
 		<p><a href="mailto:pigeon.tian@gmail.com">pigeon.tian@gmail.com</a></p>
 	</footer>
 
-	<script data-main="scripts/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js" async>
-	</script>
 </body>
 </html>
