@@ -49,10 +49,11 @@ require(['jquery', 'fullPage', 'bootstrap', 'pace'], function($, fullPage, boots
 			anchors:['aboutme', 'interests', 'reading', 'contacts'],       
 	    	navigation: true,
 	        navigationPosition: 'right',
+	        navigationTooltips: ['aboutme', 'interests', 'reading', 'contacts'],
 	        showActiveTooltip: true,
 	        slidesNavigation: true,
 	        slidesNavPosition: 'bottom',
-            menu : '#menu',
+
 	        //Scrolling
 	        css3: true,
 	        scrollingSpeed: 700,
