@@ -1,12 +1,4 @@
-$pageBackgroundColor : #FFFFFF;
-$a_LinkAndVisitedColor : #FFFFFF;
-$a_hoverColor: #BEC4C1;
-$backgroundImage : "../resources/sand.jpg";
-
-
-
-
-
+@import "mixin";
 
 html {
     padding : 0;
@@ -14,13 +6,41 @@ html {
 }
 
 div#fp-nav {
-	ul {
-		li {
-			font-size: 2rem;
-			color: #27DCEC;
+    ul {
+        li {
+            font-size : 2rem;
+            color: #27DCEC;
+        }
+    }
+}
+
+div#video-wrapper {
+	width: 100%;
+	overflow: visible;
+	
+	video {
+		@media screen and (min-width: 1350px) {
+			@include video-justify(2);
 		}
+		@media screen and (max-width: 1350px) {
+			@include video-justify(2.8);
+		}
+		@media screen and (max-width: 900px) {
+			@include video-justify(3);
+		} 
+		@media screen and (max-width: 680px) {
+			@include video-justify(4);
+		} 		
+		@media screen and (max-width: 460px) {
+			@include video-justify(4.8);
+		} 
 	}
 }
+
+
+
+
+
 /*
 
 body.container { 
