@@ -8,10 +8,10 @@ window.addEventListener('load', function() {
 });
 
 function preload() {	
-    game.load.image('sky', '../htmlGame/resources/maps/assets/sky.png');
-    game.load.image('ground', '../htmlGame/resources/maps/assets/platform.png');
-    game.load.image('star', '../htmlGame/resources/maps/assets/star.png');
-    game.load.spritesheet('dude', '../htmlGame/resources/maps/assets/dude.png', 32, 48);
+    game.load.image('sky', 'resources/maps/assets/sky.png');
+    game.load.image('ground', 'resources/maps/assets/platform.png');
+    game.load.image('star', 'resources/maps/assets/star.png');
+    game.load.spritesheet('dude', 'resources/maps/assets/dude.png', 32, 48);
 }
 
 function create() {
