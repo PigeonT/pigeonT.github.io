@@ -58,22 +58,26 @@ define(['phaser'], function(Phaser) {
 
 	GameLogic.play = {
 		preload : function() {
-			this.game.load.tilemap('game_world', '../htmlGame/resources/maps/world.json', null, Phaser.Tilemap.TILED_JSON);
-			this.game.load.image('tilesheet', '../htmlGame/resources/img/tilesheet.png');
-			this.game.load.image('bg_layer', '../htmlGame/resources/img/bg_layer.png');
+			this.game.load.tilemap('game_world', '../resources/maps/world.json', null, Phaser.Tilemap.TILED_JSON);
+			this.game.load.image('tilesheet', '../resources/img/tilesheet.png');
+			this.game.load.image('bg_layer', '../resources/img/bg_layer.png');
 
-			this.game.load.image('animal_panda', '../htmlGame/resources/img/panda.png');
-			this.game.load.image('animal_giraffe', '../htmlGame/resources/img/giraffe.png');
-			this.game.load.image('animal_monkey', '../htmlGame/resources/img/monkey.png');
-			this.game.load.image('animal_penguin', '../htmlGame/resources/img/penguin.png');this.game.load.image('animal_giraffe', '../htmlGame/resources/img/panda.png');
-			this.game.load.image('animal_rabbit', '../htmlGame/resources/img/rabbit.png');
-			this.game.load.image('animal_pig', '../htmlGame/resources/img/pig.png');this.game.load.image('animal_giraffe', '../htmlGame/resources/img/panda.png');
-			this.game.load.image('animal_snake', '../htmlGame/resources/img/snake.png');
-			this.game.load.image('animal_elephant', '../htmlGame/resources/img/elephant.png');this.game.load.image('animal_snake', '../htmlGame/resources/img/panda.png');
-			this.game.load.image('animal_hippo', '../htmlGame/resources/img/hippo.png');this.game.load.image('animal_snake', '../htmlGame/resources/img/panda.png');
-			this.game.load.image('animal_parrot', '../htmlGame/resources/img/parrot.png');
+			this.game.load.image('animal_panda', '../resources/img/panda.png');
+			this.game.load.image('animal_giraffe', '../resources/img/giraffe.png');
+			this.game.load.image('animal_monkey', '../resources/img/monkey.png');
+			this.game.load.image('animal_penguin', '../resources/img/penguin.png');
+            this.game.load.image('animal_giraffe', '../resources/img/panda.png');
+			this.game.load.image('animal_rabbit', '../resources/img/rabbit.png');
+			this.game.load.image('animal_pig', '../resources/img/pig.png');
+            this.game.load.image('animal_giraffe', '../resources/img/panda.png');
+			this.game.load.image('animal_snake', '../resources/img/snake.png');
+			this.game.load.image('animal_elephant', '../resources/img/elephant.png');
+            this.game.load.image('animal_snake', '../resources/img/panda.png');
+			this.game.load.image('animal_hippo', '../resources/img/hippo.png');
+            this.game.load.image('animal_snake', '../resources/img/panda.png');
+			this.game.load.image('animal_parrot', '../resources/img/parrot.png');
 
-			this.game.load.spritesheet('hero', '../htmlGame/resources/img/hero.png', 61.5, 65);		
+			this.game.load.spritesheet('hero', '../resources/img/hero.png', 61.5, 65);		
 
 		},
 		create : function() {
