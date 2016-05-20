@@ -6,7 +6,9 @@ require.config({
 		'fullPage' : ['libs/fullPage.min'],
 		'jquery' : ['libs/jquery.min'],
         'typed' : ['libs/typed'],
-        'highlight' : ['libs/highlight.min']
+        'highlight' : ['libs/highlight.min'],
+        'config' : ['config/config'],
+        'phaser' : ['libs/phaser']
 	},
 
 	shim: {
@@ -33,12 +35,25 @@ require.config({
         },
         highlight : {
             exports : 'highlight'
+        },
+        'phaser' : {
+            exports : 'Phaser'
         }
 	}
 });
 
-require(['jquery', 'highlight', 'fullPage', 'typed'], function($, hljs) {
+require(['jquery', 'highlight', 'phaser', 'config', 'GameLogic', 'fullPage', 'typed',], 
+    function($, hljs, Phaser, Config, GameLogic) {
 	'use strict'
+
+    const game = Config.init();
+
+    game.state.add('Bootstrap', GameLogic.bootstrap);
+    game.state.add('Play', GameLogic.play);
+    game.state.add('GameOver', GameLogic.gameOver);
+
+    game.state.start('Bootstrap');
+
 
     const INTRODUCTION = ['Let\'s explore this awesome world together! ^2000', 'I am pigeon ^500 how are you? ^3000'];
 	var Config = {

@@ -84,6 +84,9 @@ footer.container-fluid {
     footer.container-fluid div.social-links a:hover {
       color: #286090; }
 
+canvas {
+  margin: 40px auto; }
+
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
