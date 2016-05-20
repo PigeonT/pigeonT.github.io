@@ -1,50 +1,116 @@
-html {
+@font-face {
+  font-family: colabbol;
+  src: url(fonts/colabbol.otf); }
+@font-face {
+  font-family: colablig;
+  src: url(fonts/colablig.otf); }
+@font-face {
+  font-family: colabmed;
+  src: url(fonts/colabmed.otf); }
+@font-face {
+  font-family: colabreg;
+  src: url(fonts/colabreg.otf); }
+@font-face {
+  font-family: colabthi;
+  src: url(fonts/colabthi.otf); }
+/*deprecated*/
+/*@keyframes rotateLogo {
+
+	0% {transform: rotateY(0deg);}
+	10% {transform: rotateY(72deg);}
+}*/
+* {
   padding: 0;
   margin: 0; }
+
+html, body {
+  font-family: colablig, Misco, Serif;
+  font-size: 14px; }
 
 div#fp-nav ul li {
   font-size: 2rem;
   color: #27DCEC; }
 
-div#video-wrapper {
-  width: 100%;
-  overflow: visible; }
-  @media screen and (min-width: 1350px) {
-    div#video-wrapper video {
-      -webkit-transform: scale(2);
-      -moz-transform: scale(2);
-      -ms-transform: scale(2);
-      -o-transform: scale(2);
-      transform: scale(2); } }
-  @media screen and (max-width: 1350px) {
-    div#video-wrapper video {
-      -webkit-transform: scale(2.8);
-      -moz-transform: scale(2.8);
-      -ms-transform: scale(2.8);
-      -o-transform: scale(2.8);
-      transform: scale(2.8); } }
-  @media screen and (max-width: 900px) {
-    div#video-wrapper video {
-      -webkit-transform: scale(3);
-      -moz-transform: scale(3);
-      -ms-transform: scale(3);
-      -o-transform: scale(3);
-      transform: scale(3); } }
-  @media screen and (max-width: 680px) {
-    div#video-wrapper video {
-      -webkit-transform: scale(4);
-      -moz-transform: scale(4);
-      -ms-transform: scale(4);
-      -o-transform: scale(4);
-      transform: scale(4); } }
-  @media screen and (max-width: 460px) {
-    div#video-wrapper video {
-      -webkit-transform: scale(4.8);
-      -moz-transform: scale(4.8);
-      -ms-transform: scale(4.8);
-      -o-transform: scale(4.8);
-      transform: scale(4.8); } }
+div[data-anchor='aboutme'] {
+  text-align: center;
+  padding-bottom: 0;
+  color: #B9AA23; }
+  div[data-anchor='aboutme'] img {
+    padding: 0; }
+  div[data-anchor='aboutme'] p {
+    position: absolute;
+    width: 50%;
+    top: 35%; }
+    div[data-anchor='aboutme'] p span.welcome-text {
+      font-size: 2rem;
+      color: #000000; }
 
+div[data-anchor="interests"] h3 {
+  font-size: 2rem; }
+div[data-anchor="interests"] p {
+  font-size: 1.5rem; }
+div[data-anchor="interests"] div img#penguin-logo:hover {
+  transform: rotateY(360deg);
+  transition: all 4s ease; }
+
+div[data-anchor="contacts"] div label[for="message"] {
+  vertical-align: top;
+  padding: 0; }
+div[data-anchor="contacts"] pre {
+  background-color: #FFFFFF;
+  border: none; }
+  div[data-anchor="contacts"] pre code {
+    background-color: #FFFFFF; }
+
+footer.container-fluid {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222222;
+  height: 45px;
+  width: 100%; }
+  footer.container-fluid div {
+    height: 100%; }
+  footer.container-fluid div.social-links {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center; }
+    footer.container-fluid div.social-links a {
+      flex: 1;
+      color: #FFFFFF; }
+    footer.container-fluid div.social-links a:hover {
+      color: #286090; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /*
 
 body.container { 

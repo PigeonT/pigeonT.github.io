@@ -1,8 +1,47 @@
 @import "mixin";
 
-html {
+$welcomeTextColor : #000000;
+$interestsSectionColor : #B9AA23;
+
+@font-face {
+    font-family: colabbol;
+    src: url(fonts/colabbol.otf);
+}
+@font-face {
+    font-family: colablig;
+    src: url(fonts/colablig.otf);
+}
+
+@font-face {
+    font-family: colabmed;
+    src: url(fonts/colabmed.otf);
+}
+
+@font-face {
+    font-family: colabreg;
+    src: url(fonts/colabreg.otf);
+}
+
+@font-face {
+    font-family: colabthi;
+    src: url(fonts/colabthi.otf);
+}
+
+/*deprecated*/
+/*@keyframes rotateLogo {
+
+	0% {transform: rotateY(0deg);}
+	10% {transform: rotateY(72deg);}
+}*/
+
+* {
     padding : 0;
     margin : 0;
+}
+
+html, body {
+    font-family: colablig, Misco, Serif;
+    font-size: 14px;
 }
 
 div#fp-nav {
@@ -14,29 +53,117 @@ div#fp-nav {
     }
 }
 
-div#video-wrapper {
-	width: 100%;
-	overflow: visible;
+div[data-anchor='aboutme'] {
+	text-align: center;
+	padding-bottom: 0;
+	color : $interestsSectionColor;
+	img {
+		padding: 0
+	}
+
+	p {
+		position: absolute;
+		width: 50%;
+		top: 35%;
+		span.welcome-text {
+			font-size: 2rem;
+			color: $welcomeTextColor;
+		}
+	}	
 	
-	video {
-		@media screen and (min-width: 1350px) {
-			@include video-justify(2);
+}
+
+div[data-anchor="interests"] {
+	h3 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1.5rem;
+	}
+
+	div {
+
+		img#penguin-logo {
+
 		}
-		@media screen and (max-width: 1350px) {
-			@include video-justify(2.8);
+
+		img#penguin-logo:hover {
+			transform: rotateY(360deg);
+			transition: all 4s ease;
 		}
-		@media screen and (max-width: 900px) {
-			@include video-justify(3);
-		} 
-		@media screen and (max-width: 680px) {
-			@include video-justify(4);
-		} 		
-		@media screen and (max-width: 460px) {
-			@include video-justify(4.8);
-		} 
 	}
 }
 
+div[data-anchor="contacts"] {
+	
+	div {
+
+		label[for="message"] {
+			vertical-align: top;
+			padding: 0;
+		}
+	}
+
+	pre{
+		background-color: #FFFFFF;
+		border: none;
+		code {
+			background-color: #FFFFFF;
+		}
+	}
+}
+
+
+footer.container-fluid {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #222222;
+	height: 45px;
+	width: 100%;
+
+	div {
+		height: 100%;
+	}
+	div.social-links {
+		display: flex;
+		height: 100%;
+		align-items: center;
+    	justify-content: center;
+    	a {
+    		flex: 1;
+    		color: #FFFFFF;
+    	}
+
+    	a:hover {
+    		color: #286090;
+    	}
+	}
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 
 

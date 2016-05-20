@@ -11,10 +11,12 @@
 	<link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/fullPage.css" />
+	<link rel="stylesheet" href="css/animate.css" />
 	<link href="css/pace-theme.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/highlighting.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/main.css" />
-	<script data-main="scripts/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js" async>
-	</script>
+	<script data-main="main" src="libs/require.js" async></script>
 
 </head>
 <body class="container-fluid">
@@ -33,7 +35,7 @@
 					<ul class="nav navbar-nav navbar-right" id="menu">
 						<li data-menuanchor="aboutme"><a href="#aboutme">Me</a></li>
 						<li data-menuanchor="interests"><a href="#interests" >Interests</a></li>
-						<li data-menuanchor="reading"><a href="#reading">Reading</a></li>
+						<li data-menuanchor="reading"><a href="#reading">Show</a></li>
 						<li data-menuanchor="contacts"><a href="#contacts">Contacts</a></li>
 					</ul>
 				</div> 
@@ -44,28 +46,114 @@
 	<main class="row content " id="fullpage">
 		<div>
 		    <div class="section" data-anchor="aboutme">
-		    	<div id="video-wrapper">
-                    <video muted loop autoplay="true" width="100%" height="100%" style="background-size:cover;">
-			    		<source src="resources/backgroundVideo.mp4" type="video/mp4" />
-			    	</video>
-                </div>
+		    	<img src="resources/background.jpg" width="100%" height="100%" alt="sky.jpg" />
+		    	<div><p><span class="welcome-text"></span></p></div>
 		    </div>
-		    <div class="section" data-anchor="interests">
-		    	<img src="resources/sky0.jpg" width="100%" height="100%" alt="sky0.jpg" />
+		    <div class="section container-fluid" data-anchor="interests">
+		    	<div class="col-sm-1"></div>
+
+		    	<div class="col-md-3 text-right">
+		    		<h3>Who</h3>
+					<p class="left">I am now EE student from TU Darmstadt <a href="http://www.tu-darmstadt.de/"></a> in Germany.</p>
+
+					<br />
+
+					<h3>Love</h3>
+					<p class="left">I like everything about technology and science, especially programming.</p>
+
+		    	</div>
+		    	<div class="col-md-4 text-center">
+		    		<img id="penguin-logo" src="resources/me.jpg" width="200px" height="240px" alt="me.jpg" class="img-circle" />
+		    	</div>
+		    	<div class="col-md-3 text-left">
+		    		<h3>Dream</h3>
+					<p class="right">I want to be a good coder and people.</p>
+
+					<br />
+
+					<h3>Freetime</h3>
+					<p class="right">I like sports, music and  such wonderful wolrd</p>
+		    	</div>
+		    	<div class="col-sm-1"></div>
 		    </div>
 		    <div class="section" data-anchor="reading">
-		    	<img src="resources/sky1.jpg" width="100%" height="100%" alt="sky1.jpg" />
+
 		    </div>
-		    <div class="section" data-anchor="contacts">
-				<img src="resources/sky3.jpg" width="100%" height="100%" alt="sky2.jpg" />
-		    </div>
-		    	
-		</div>       
+		    <div class="section container-fluid" data-anchor="contacts">
+		    	<div class="row">
+		    		<h2 class="text-center">Invite me for a coffee?</h2>
+		    		<br />
+		    	</div>
+		    	<br />
+		    	<div class="row">
+		    		<div class="col-sm-1"></div>
+		    		<div class="col-sm-5">
+		    			<form id="contact-form" role="form" class="text-center">
+		    				<div class="form-group row">
+		    				<div>
+		    					<label class="col-sm-2 form-control-label" for="name"><var>var <span>name =  </span></var></label>
+		    					<div class="col-sm-10"><input class="form-control" type="text" id="name" placeholder="Name (Anonymous)" name="name"></div>
+		    				</div>
+			    			</div> 
+			    			<div class="form-group row">
+			    				<div>
+			    					<label class="col-sm-2 form-control-label" for="email"><var>var <span>email =  </span></var></label>
+			    					<div class="col-sm-10">
+		    							<input class="form-control" type="email" id="email" placeholder="Email" name="email"required>
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group row">
+			    				<div>
+			    					<label class="col-sm-2 form-control-label" for="message"><var>var <span>message =  </span></var></label>
+			    					<div class="col-sm-10">
+			    						<textarea class="form-control" id="message" name="message" placeholder="Message" rows="10"></textarea>
+			    					</div>
+			    				</div>		    			
+			    			</div>
+			    			<div class="form-group row">
+			    				<div class="col-sm-2"></div>
+			    				<div class="col-sm-10 text-left">
+				    				<button type="submit" class="btn btn-primary">
+				    					<i class="fa fa-paper-plane" aria-hidden="true"></i></button>		
+								</div>
+			    			</div>
+		    			</form>	
+
+		    		</div>
+		    		<div class="col-sm-5">
+		    			<pre class="text-left">
+		    				<code class="javascript">
+require(['EmailDispatcher'], function() {
+	class Email {
+	    constructor(name, email, message) {
+            this.name = name;
+            this.email = email;
+            this.message = message;
+            }
+	}
+
+	new EmailDispatcher.send(new Email('<span id="span-name"></span>', 'Email', 'Message'));
+});
+
+							</code>
+						</pre>
+		    		</div> 
+		    		<div class="col-sm-1"></div>
+		    	</div>	
+		    	</div>       
 	</main>
+	<footer class="container-fluid text-center">
+		<div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6 social-links">
+				<a href="https://www.facebook.com/pigeon.tian"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="https://github.com/pigeonT"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+				<a href="https://plus.google.com/101881761520684884097"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
 
-	<footer class="row">
-		<p><a href="mailto:pigeon.tian@gmail.com">pigeon.tian@gmail.com</a></p>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
 	</footer>
-
 </body>
 </html>
