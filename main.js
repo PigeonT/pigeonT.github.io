@@ -17,6 +17,8 @@ require(['phaser', 'config', 'GameLogic'], function(Phaser, Config, GameLogic) {
     game.state.add('Bootstrap', GameLogic.bootstrap);
     game.state.add('Play', GameLogic.play);
     game.state.add('GameOver', GameLogic.gameOver);
+    game.state.add('Win', GameLogic.win);
+
 
     game.state.start('Bootstrap');
 
