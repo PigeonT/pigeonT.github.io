@@ -53,12 +53,19 @@ div[data-anchor="interests"] div img#penguin-logo:hover {
   transform: rotateY(360deg);
   transition: all 4s ease; }
 
+div[data-anchor="reading"] {
+  /*div#background {
+  	background: url(../resources/game-background.png) center no-repeat;
+  	background-size: cover;
+  }*/ }
+
 div[data-anchor="contacts"] div label[for="message"] {
   vertical-align: top;
   padding: 0; }
 div[data-anchor="contacts"] pre {
   background-color: #FFFFFF;
-  border: none; }
+  border: none;
+  overflow: hidden; }
   div[data-anchor="contacts"] pre code {
     background-color: #FFFFFF; }
 
@@ -74,13 +81,18 @@ footer.container-fluid {
   footer.container-fluid div {
     height: 100%; }
   footer.container-fluid div.social-links {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center; }
+    		/*height: 100%;
+    		align-items: center;
+        	justify-content: center;*/
+    padding-top: 8px; }
     footer.container-fluid div.social-links a {
-      flex: 1;
-      color: #FFFFFF; }
+      /*flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 2rem;
+      display: inline;*/
+      width: 100px;
+      color: #FFFFFF;
+      /*padding: 0 50px;*/ }
     footer.container-fluid div.social-links a:hover {
       color: #286090; }
 

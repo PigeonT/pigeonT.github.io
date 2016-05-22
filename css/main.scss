@@ -94,6 +94,14 @@ div[data-anchor="interests"] {
 	}
 }
 
+div[data-anchor="reading"] {
+	/*div#background {
+		background: url(../resources/game-background.png) center no-repeat;
+		background-size: cover;
+	}*/
+
+}
+
 div[data-anchor="contacts"] {
 	
 	div {
@@ -107,6 +115,7 @@ div[data-anchor="contacts"] {
 	pre{
 		background-color: #FFFFFF;
 		border: none;
+		overflow: hidden;
 		code {
 			background-color: #FFFFFF;
 		}
@@ -128,13 +137,18 @@ footer.container-fluid {
 		height: 100%;
 	}
 	div.social-links {
-		display: flex;
-		height: 100%;
+		/*height: 100%;
 		align-items: center;
-    	justify-content: center;
+    	justify-content: center;*/
+    	padding-top: 8px; 
     	a {
-    		flex: 1;
+    		/*flex-grow: 0;
+    		flex-shrink: 1;
+    		flex-basis: 2rem;
+    		display: inline;*/
+    		width: 100px;
     		color: #FFFFFF;
+    		/*padding: 0 50px;*/
     	}
 
     	a:hover {

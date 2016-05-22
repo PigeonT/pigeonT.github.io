@@ -3,7 +3,7 @@ require.config({
 	paths: {
 		'angular' : ['libs/angular.min'],
 		'angularRoute' : ['libs/angular-route.min'],
-		'fullPage' : ['libs/fullPage.min'],
+		'fullPage' : ['libs/fullPage'],
 		'jquery' : ['libs/jquery.min'],
         'typed' : ['libs/typed'],
         'highlight' : ['libs/highlight.min'],
@@ -51,6 +51,8 @@ require(['jquery', 'highlight', 'phaser', 'config', 'GameLogic', 'fullPage', 'ty
     game.state.add('Bootstrap', GameLogic.bootstrap);
     game.state.add('Play', GameLogic.play);
     game.state.add('GameOver', GameLogic.gameOver);
+    game.state.add('Win', GameLogic.win);
+
 
     game.state.start('Bootstrap');
 
@@ -214,6 +216,21 @@ require(['jquery', 'highlight', 'phaser', 'config', 'GameLogic', 'fullPage', 'ty
 
         $('#name').on('keyup', function(e) {
             $('#span-name').text(e.target.value);
+        });
+
+        // hotfix for anchor problem, it is because fullPage.js closure, I can not access this function
+        // so I pretend to click() 
+        $('#menu li').on('click', function (e){
+            e.preventDefault();
+            
+            var anchor = $(this).attr('data-menuanchor');
+
+            $('a[href="#' + anchor + '"] span').click();
+
+        });
+
+        $('div[data-anchor]').each(function(i, v) {
+            $(v).css('padding-bottom', 0);
         });
 
     });  
