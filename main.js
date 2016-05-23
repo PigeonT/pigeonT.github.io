@@ -164,6 +164,9 @@ require(['jquery', 'highlight', 'phaser', 'config', 'GameLogic', 'fullPage', 'ty
                                 $('footer').css('display', 'none');
                                 break;
                             case 3:
+                                toggleElement = {
+                                    'div[data-anchor="reading"] div' : 'fadeInLeft'
+                                };
                                 $('footer').css('display', 'none');
                                 break;
                             case 4:
