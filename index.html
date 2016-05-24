@@ -96,16 +96,16 @@
 		    	<div class="row">
 		    		<div class="col-sm-1"></div>
 		    		<div class="col-sm-5">
-		    			<form id="contact-form" role="form" class="text-center">
+		    			<form action="http://pigeontgithubblog-angebot.rhcloud.com/api/sendEmail/fromPigeonTTODispatch" id="contact-form" role="form" class="text-center" enctype="application/x-www-form-urlencoded" method="post">
 		    				<div class="form-group row">
 		    				<div>
-		    					<label class="col-sm-2 form-control-label" for="name"><var>var <span>name =  </span></var></label>
+		    					<label class="col-sm-2 form-control-label" for="name"><var>const <span>name =  </span></var></label>
 		    					<div class="col-sm-10"><input class="form-control" type="text" id="name" placeholder="Name (Anonymous)" name="name"></div>
 		    				</div>
 			    			</div> 
 			    			<div class="form-group row">
 			    				<div>
-			    					<label class="col-sm-2 form-control-label" for="email"><var>var <span>email =  </span></var></label>
+			    					<label class="col-sm-2 form-control-label" for="email"><var>const <span>email =  </span></var></label>
 			    					<div class="col-sm-10">
 		    							<input class="form-control" type="email" id="email" placeholder="Email" name="email"required>
 			    					</div>
@@ -113,7 +113,7 @@
 			    			</div>
 			    			<div class="form-group row">
 			    				<div>
-			    					<label class="col-sm-2 form-control-label" for="message"><var>var <span>message =  </span></var></label>
+			    					<label class="col-sm-2 form-control-label" for="message"><var>const <span>message =  </span></var></label>
 			    					<div class="col-sm-10">
 			    						<textarea class="form-control" id="message" name="message" placeholder="Message" rows="10"></textarea>
 			    					</div>
@@ -132,16 +132,22 @@
 		    		<div class="col-sm-5">
 		    			<pre class="text-left">
 		    				<code class="javascript">
-require(['EmailDispatcher'], function() {
-	class Email {
-	    constructor(name, email, message) {
+require(['EmailDispatcher'], function(EmailDispatcher) {
+    'use strict'
+    class Email {
+        constructor(name, email, message) {
             this.name = name;
             this.email = email;
             this.message = message;
-            }
-	}
+        }
+    }
 
-	new EmailDispatcher.send(new Email('<span id="span-name"></span>', 'Email', 'Message'));
+    try {
+        new EmailDispatcher().send(
+	    new Email('<span id="span-name"></span>', 'Email', 'Message'));
+    }catch(err) {
+        console.error(err);
+    }
 });
 
 							</code>

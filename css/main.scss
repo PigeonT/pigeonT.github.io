@@ -106,6 +106,9 @@ div[data-anchor="contacts"] {
 	
 	div {
 
+		label {
+			padding: 0;
+		}
 		label[for="message"] {
 			vertical-align: top;
 			padding: 0;
@@ -118,6 +121,8 @@ div[data-anchor="contacts"] {
 		overflow: hidden;
 		code {
 			background-color: #FFFFFF;
+			position: relative;
+			top: -50px;
 		}
 	}
 }
