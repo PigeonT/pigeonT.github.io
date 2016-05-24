@@ -236,7 +236,35 @@ require(['jquery', 'highlight', 'phaser', 'config', 'GameLogic', 'fullPage', 'ty
             $(v).css('padding-bottom', 0);
         });
 
-    });  
+        $('#btn-submit').click(function() {
+            var params = { 
+                name : $('#name').val(),
+                email : $('#email').val(),
+                message : $('#message').val()
+            };
+            var query = "";
 
+            for (let key in params) {
+                query += encodeURIComponent(key)+"="+encodeURIComponent(params[key])+"&";
+            }
+
+            $.post('http://pigeontgithubblog-angebot.rhcloud.com/api/sendEmail/fromPigeonTTODispatch', 
+                query, function(response){
+                console.log(response);
+            },'application/x-www-form-urlencoded')
+              .done(function(e) {
+                $('#name').val('');
+                $('#email').val('');
+                $('#message').val('');
+              })
+              .fail(function(e) {
+                $('#name').val('');
+                $('#email').val('');
+                $('#message').val('');
+              });
+            // location.reload();
+        });       
+    });  
+//http://pigeontgithubblog-angebot.rhcloud.com/api/sendEmail/fromPigeonTTODispatch
     
 });
